@@ -1,0 +1,46 @@
+{
+  "name": "feature-flags",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cra-template": "1.2.0",
+    "dotenv": "^16.4.7",
+    "env-cmd": "^10.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:dev": "REACT_APP_ENV='development' BUILD_PATH='./dist/development/' env-cmd -f ./environments/.env.development npm run build",
+    "build:test": "REACT_APP_ENV='testing' BUILD_PATH='./dist/testing/' env-cmd -f ./environments/.env.testing npm run build",
+    "build:stg": "REACT_APP_ENV='staging' BUILD_PATH='./dist/staging/' env-cmd -f ./environments/.env.staging npm run build",
+    "build:prod": "REACT_APP_ENV='production' BUILD_PATH='./dist/production/' env-cmd -f ./environments/.env.production npm run build",
+    "build:all": "npm run build:stg && npm run build:prod && npm run build:test && npm run build:dev"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "web-vitals": "^4.2.4"
+  }
+}
