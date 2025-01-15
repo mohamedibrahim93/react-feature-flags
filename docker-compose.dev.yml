@@ -4,12 +4,16 @@ services:
   react-app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - "8080:8080" # Host port:Container port
     environment:
       REACT_APP_API_URL: "https://api.example123.com"
-      REACT_APP_TITLE: "Dynamic App 1"
+      REACT_APP_OTHER_VAR: "DynamicApp1"
     volumes:
       - ./entrypoint.sh:/entrypoint.sh # Ensure the script is updated dynamically if needed
     command: ["nginx", "-g", "daemon off;"]
+
+
+
+# docker-compose -f .\docker-compose.dev.yml  up --build -d

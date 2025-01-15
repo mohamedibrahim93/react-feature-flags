@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#TODO: issue in variables contains spaces
+
 # Start creating the config.js file
 echo "window._env_ = {" > /usr/share/nginx/html/config.js
 
