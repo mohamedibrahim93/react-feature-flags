@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#TODO: issue in variables contains spaces
+#TODO: issue in variables contains spaces and keep default if not exist in new env variables
 
 # Start creating the config.js file
 echo "window._env_ = {" > /usr/share/nginx/html/config.js

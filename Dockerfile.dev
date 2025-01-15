@@ -47,4 +47,4 @@ ENTRYPOINT ["/entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
 
 # docker build . -f Dockerfile.dev -t react-ff  --no-cache --progress=plain  
-# docker run -d -p 8080:8080  -e REACT_APP_API_URL="https://api.example_1.com" -e REACT_APP_OTHER_VAR="some_value_1" -e REACT_APP_ENV="prod" react-ff
+# docker run -d -p 8080:8080  -e REACT_APP_API_URL="https://api.example_1.com" -e REACT_APP_OTHER_VAR="some_value_1" react-ff
